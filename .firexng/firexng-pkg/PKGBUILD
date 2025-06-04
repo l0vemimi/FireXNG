@@ -1,0 +1,19 @@
+pkgname=firexng-bin
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="FireXNG bin"
+arch=('x86_64')
+url="https://github.com/l0vemimi/FireXNG"
+license=('MPL')
+depends=('gtk3' 'nss' 'dbus-glib' 'libxss' 'libxt')
+source=("firexng.tar.zst" "firexng.desktop" "firexng.png")
+sha256sums=('SKIP' 'SKIP' 'SKIP')
+
+package() {
+    install -d "$pkgdir/opt/firexng"
+    bsdtar -xf "$srcdir/firexng.tar.zst" -C "$pkgdir/opt/firexng"
+    install -d "$pkgdir/usr/bin"
+    ln -s /opt/firexng/firexng "$pkgdir/usr/bin/firexng"
+    install -Dm644 "$srcdir/firexng.desktop" "$pkgdir/usr/share/applications/firexng.desktop"
+    install -Dm644 "$srcdir/firexng.png" "$pkgdir/usr/share/pixmaps/firexng.png"
+}

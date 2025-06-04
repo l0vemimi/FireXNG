@@ -1,0 +1,4 @@
+#!/bin/sh
+
+MOZ_APP_DISPLAYNAME=FireXNG
+MOZ_MACBUNDLE_NAME=firexng

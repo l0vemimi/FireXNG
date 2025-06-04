@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=FireXNG
+GenericName=Web Browser
+Comment=FireXNG
+Exec=/usr/bin/firexng %u
+Icon=firexng
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
+StartupNotify=true
