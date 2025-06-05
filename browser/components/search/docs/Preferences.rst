@@ -10,7 +10,7 @@ Hidden
 These preferences are normally hidden, and should not be used unless you really
 know what you are doing.
 
-browser.search.openintab (boolean, default: false)
+browser.search.openintab (boolean, default: true)
   Whether or not items opened from the search bar are opened in a new tab.
 
 browser.search.context.loadInBackground (boolean, default: false)

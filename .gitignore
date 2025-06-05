@@ -1,7 +1,4 @@
-# .gitignore - List of filenames git should ignore
-
-# See docs/code-quality/lint/linters/ignorefile.rst for lint-ignore-next-line
-# syntax.
+.firexng/
 
 # Filenames that should be ignored wherever they appear
 *~

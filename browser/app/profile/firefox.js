@@ -72,7 +72,7 @@ pref("extensions.langpacks.signatures.required", true);
 pref("xpinstall.signatures.required", true);
 
 // Enable data collection permissions.
-pref("extensions.dataCollectionPermissions.enabled", true);
+pref("extensions.dataCollectionPermissions.enabled", false);
 
 // Dictionary download preference
 pref("browser.dictionaries.download.url", "https://addons.mozilla.org/%LOCALE%/firefox/language-tools/");
@@ -280,11 +280,11 @@ pref("browser.touchmode.auto", true);
 pref("browser.compactmode.show", false);
 
 // At startup, check if we're the default browser and prompt user if not.
-pref("browser.shell.checkDefaultBrowser", true);
+pref("browser.shell.checkDefaultBrowser", false);
 pref("browser.shell.shortcutFavicons",true);
 pref("browser.shell.mostRecentDateSetAsDefault", "");
 pref("browser.shell.skipDefaultBrowserCheckOnFirstRun", true);
-pref("browser.shell.didSkipDefaultBrowserCheckOnFirstRun", false);
+pref("browser.shell.didSkipDefaultBrowserCheckOnFirstRun", true);
 pref("browser.shell.defaultBrowserCheckCount", 0);
 #if defined(XP_WIN)
 // Attempt to set the default browser on Windows 10 using the UserChoice registry keys,
@@ -807,7 +807,7 @@ pref("browser.search.separatePrivateDefault.ui.enabled", false);
 pref("browser.search.separatePrivateDefault.ui.banner.max", 0);
 
 // Enables search SERP telemetry page categorization.
-pref("browser.search.serpEventTelemetryCategorization.enabled", true);
+pref("browser.search.serpEventTelemetryCategorization.enabled", false);
 
 // A count of Glean SERP categorization event metrics that have been recorded
 // but not yet submitted in a ping. Needed to prevent sending a ping with only
@@ -1976,7 +1976,7 @@ pref("browser.newtabpage.activity-stream.discoverystream.onboardingExperience.en
 pref("browser.newtabpage.activity-stream.discoverystream.thumbsUpDown.locale-thumbs-config", "en-US, en-GB, en-CA");
 
 #ifdef NIGHTLY_BUILD
-  pref("browser.newtabpage.activity-stream.telemetry.privatePing.enabled", true);
+  pref("browser.newtabpage.activity-stream.telemetry.privatePing.enabled", false);
 #else
   pref("browser.newtabpage.activity-stream.telemetry.privatePing.enabled", false);
 #endif
@@ -2003,7 +2003,7 @@ pref("browser.newtabpage.activity-stream.discoverystream.thumbsUpDown.searchTops
 pref("browser.newtabpage.activity-stream.discoverystream.publisherFavicon.enabled", false);
 
 // User pref to show stories on newtab (feeds.system.topstories has to be set to true as well)
-pref("browser.newtabpage.activity-stream.feeds.section.topstories", true);
+pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 
 // The pref controls if search hand-off is enabled for Activity Stream.
 pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", true);
@@ -2019,7 +2019,7 @@ pref("browser.newtabpage.activity-stream.logowordmark.alwaysVisible", true);
 pref("browser.newtabpage.activity-stream.hideTopSitesWithSearchParam", "mfadid=adm");
 
 // Separate about welcome
-pref("browser.aboutwelcome.enabled", true);
+pref("browser.aboutwelcome.enabled", false);
 // Used to set multistage welcome UX
 pref("browser.aboutwelcome.screens", "");
 
@@ -2042,7 +2042,7 @@ pref("nimbus.profilesdatastoreservice.enabled", true);
 #if defined(MOZ_ARTIFACT_BUILDS)
   pref("nimbus.telemetry.targetingContextEnabled", false);
 #else
-  pref("nimbus.telemetry.targetingContextEnabled", true);
+  pref("nimbus.telemetry.targetingContextEnabled", false);
 #endif
 
 // Nimbus QA prefs. Used to monitor pref-setting test experiments.
@@ -2143,7 +2143,7 @@ pref("browser.uiCustomization.state", "");
 
 // If set to false, FxAccounts and Sync will be unavailable.
 // A restart is mandatory after flipping that preference.
-pref("identity.fxaccounts.enabled", true);
+pref("identity.fxaccounts.enabled", false);
 
 // The remote FxA root content URL. Must use HTTPS.
 pref("identity.fxaccounts.remote.root", "https://accounts.firefox.com/");
@@ -2186,7 +2186,7 @@ pref("identity.mobilepromo.ios", "https://www.mozilla.org/firefox/ios/?utm_sourc
 // Migrate any existing Firefox Account data from the default profile to the
 // Developer Edition profile.
 #ifdef MOZ_DEV_EDITION
-  pref("identity.fxaccounts.migrateToDevEdition", true);
+  pref("identity.fxaccounts.migrateToDevEdition", false);
 #else
   pref("identity.fxaccounts.migrateToDevEdition", false);
 #endif
@@ -2197,11 +2197,11 @@ pref("identity.fxaccounts.commands.missed.fetch_interval", 86400);
 
 // Controls whether this client can send and receive "close tab"
 // commands from other FxA clients
-pref("identity.fxaccounts.commands.remoteTabManagement.enabled", true);
+pref("identity.fxaccounts.commands.remoteTabManagement.enabled", false);
 
 // Controls whether or not the client association ping has values set on it
 // when the sync-ui-state:update notification fires.
-pref("identity.fxaccounts.telemetry.clientAssociationPing.enabled", true);
+pref("identity.fxaccounts.telemetry.clientAssociationPing.enabled", false);
 
 // Note: when media.gmp-*.visible is true, provided we're running on a
 // supported platform/OS version, the corresponding CDM appears in the
@@ -2262,21 +2262,21 @@ pref("browser.translations.select.enable", true);
 
 // Telemetry settings.
 // Determines if Telemetry pings can be archived locally.
-pref("toolkit.telemetry.archive.enabled", true);
+pref("toolkit.telemetry.archive.enabled", false);
 // Enables sending the shutdown ping when Firefox shuts down.
-pref("toolkit.telemetry.shutdownPingSender.enabled", true);
+pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 // Enables using the `pingsender` background task.
 pref("toolkit.telemetry.shutdownPingSender.backgroundtask.enabled", false);
 // Enables sending the shutdown ping using the pingsender from the first session.
 pref("toolkit.telemetry.shutdownPingSender.enabledFirstSession", false);
 // Enables sending a duplicate of the first shutdown ping from the first session.
-pref("toolkit.telemetry.firstShutdownPing.enabled", true);
+pref("toolkit.telemetry.firstShutdownPing.enabled", false);
 // Enables sending the 'new-profile' ping on new profiles.
-pref("toolkit.telemetry.newProfilePing.enabled", true);
+pref("toolkit.telemetry.newProfilePing.enabled", false);
 // Enables sending 'update' pings on Firefox updates.
-pref("toolkit.telemetry.updatePing.enabled", true);
+pref("toolkit.telemetry.updatePing.enabled", false);
 // Enables sending 'bhr' pings when the browser hangs.
-pref("toolkit.telemetry.bhrPing.enabled", true);
+pref("toolkit.telemetry.bhrPing.enabled", false);
 
 // Enable GMP support in the addon manager.
 pref("media.gmp-provider.enabled", true);
@@ -3279,7 +3279,7 @@ pref("cookiebanners.ui.desktop.cfrVariant", 0);
 
 // Trigger FOG's Artifact Build support on artifact builds.
 #ifdef MOZ_ARTIFACT_BUILDS
-  pref("telemetry.fog.artifact_build", true);
+  pref("telemetry.fog.artifact_build", false);
 #endif
 
 #ifdef NIGHTLY_BUILD

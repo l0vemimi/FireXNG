@@ -8,7 +8,7 @@ $schema: moz://mozilla.org/schemas/glean/pings/2-0-0
 first-startup:
   description: |
     Sent during startup if Firefox was launched by the installer.
-  include_client_id: true
+  include_client_id: false
   send_if_empty: false
   bugs:
     - https://bugzilla.mozilla.org/show_bug.cgi?id=1749345

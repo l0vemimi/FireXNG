@@ -74,6 +74,7 @@ pref("toolkit.telemetry.enabled", false);
 pref("toolkit.telemetry.unified", false);
 pref("toolkit.telemetry.archive.enabled", false);
 pref("toolkit.telemetry.newProfilePing.enabled", false);
+pref("toolkit.telemetry.glean.enabled", false);
 pref("datareporting.healthreport.uploadEnabled", false);
 pref("browser.ping-centre.telemetry", false);
 pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
